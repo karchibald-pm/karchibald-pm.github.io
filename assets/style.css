@@ -219,3 +219,11 @@ th { font-size: 12.5px; letter-spacing: 0.08em; text-transform: uppercase; color
 .work-links a::after { content: " →"; color: var(--gold-text); }
 .work-links a:hover { text-decoration: underline; }
 .btn-soon { background: var(--teal-soft); color: var(--teal); border: 1.5px dashed var(--teal); cursor: default; }
+/* Toolkit groups */
+.toolkit { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin: 0 0 24px; }
+.tk-group { background: #fff; border: 1px solid var(--rule); border-radius: 14px; padding: 18px 18px 14px; }
+.tk-group h3 { font-family: var(--body); font-size: 13px; font-weight: 600; color: var(--gold-text); letter-spacing: .1em; text-transform: uppercase; margin: 0 0 12px; }
+.prose ul.chips { display: flex; flex-direction: row; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 0; }
+.prose ul.chips li { margin: 0; }
+.prose ul.chips li::marker { content: none; }
+@media (max-width: 720px) { .toolkit { grid-template-columns: 1fr; } }
