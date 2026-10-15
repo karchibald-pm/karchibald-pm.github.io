@@ -227,3 +227,57 @@ th { font-size: 12.5px; letter-spacing: 0.08em; text-transform: uppercase; color
 .prose ul.chips li { margin: 0; }
 .prose ul.chips li::marker { content: none; }
 @media (max-width: 720px) { .toolkit { grid-template-columns: 1fr; } }
+
+/* ===== Case study lifecycle layout (Oct 14, 2026) ===== */
+:root { --gold-soft: #FBF3E2; --deep: #0A2B29; }
+
+/* NDA disclaimer */
+.nda { display: flex; gap: 8px; align-items: baseline; font-size: 14px; font-style: italic; color: var(--muted); }
+.nda svg { flex: none; color: var(--gold-text); position: relative; top: 2px; }
+.prose .nda { margin: 14px 0 0; }
+.work-note { margin: -12px 0 24px; }
+
+/* AI hypothesis callout */
+.hypo { margin: 0 0 8px; padding: 22px 24px; border-radius: 14px; background: var(--gold-soft); border: 1.5px solid var(--gold); }
+.hypo .lbl { font-size: 12.5px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-text); margin-bottom: 6px; }
+.prose .hypo p { margin: 0; font-family: var(--display); font-size: 21px; line-height: 1.45; color: var(--teal); }
+.hypo p b { font-weight: 600; }
+
+/* Lifecycle band */
+.life { background: var(--teal); color: #fff; }
+.life-head { display: flex; flex-direction: column; gap: 8px; margin-bottom: 36px; max-width: 46em; }
+.life .eyebrow { color: var(--gold-light); }
+.life-head h2 { color: #fff; font-size: clamp(28px, 3.4vw, 36px); }
+.life-head p { margin: 0; color: var(--on-dark-muted); }
+.phases { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.phases.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.phase { background: var(--deep); border: 1px solid rgba(226,184,92,.28); border-radius: 16px; padding: 22px 20px; display: flex; flex-direction: column; gap: 18px; min-width: 0; }
+.ph-top { display: flex; align-items: center; gap: 12px; }
+.medal { flex: none; width: 38px; height: 38px; border-radius: 50%; background: var(--gold-light); color: var(--teal); font-weight: 700; font-size: 16px; display: grid; place-items: center; font-variant-numeric: tabular-nums; }
+.phase.paused .medal { background: transparent; border: 1.5px dashed var(--gold-light); color: var(--gold-light); }
+.phase h3 { color: #fff; font-size: 23px; font-weight: 600; }
+.ph-sub { font-size: 13.5px; color: var(--on-dark-muted); margin-top: 2px; }
+.ph-lbl { font-size: 12.5px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid rgba(226,184,92,.35); }
+.phase ul { margin: 0; padding-left: 1.15em; display: flex; flex-direction: column; gap: 8px; font-size: 15.5px; line-height: 1.5; color: #fff; }
+.phase ul li::marker { color: var(--gold-light); }
+.phase ul.res { list-style: none; padding-left: 0; }
+.phase ul.res li { display: grid; grid-template-columns: 18px 1fr; gap: 8px; color: var(--on-dark-muted); }
+.phase ul.res li::before { content: "✓"; color: var(--gold-light); font-weight: 700; }
+.phase ul.res strong { color: #fff; font-weight: 600; }
+.results { margin-top: auto; }
+@media (max-width: 1080px) { .phases { grid-template-columns: repeat(2, minmax(0, 1fr)); } .phases.three { grid-template-columns: 1fr; } }
+@media (max-width: 640px) { .phases { grid-template-columns: 1fr; } }
+
+/* Signature Product Portfolio card (MatchBook) */
+.card.signature { background: #fff; border: 2px solid var(--gold); box-shadow: 0 0 0 4px var(--gold-soft); }
+.sig-badge { align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--teal); background: var(--gold-soft); border: 1px solid var(--gold); border-radius: 999px; padding: 4px 12px; }
+.sig-badge::before { content: "★"; color: var(--gold); }
+
+/* MatchBook: signature eyebrow + see-the-full-build callout */
+.band .eyebrow .sig { color: var(--gold-light); }
+.seebuild { margin: 40px 0 0; padding: 26px; border-radius: 16px; background: var(--gold-soft); border: 2px solid var(--gold); display: flex; flex-wrap: wrap; gap: 14px 24px; align-items: center; justify-content: space-between; }
+.seebuild > div { flex: 1 1 320px; min-width: 0; }
+.seebuild .lbl { font-size: 12.5px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-text); margin-bottom: 4px; }
+.prose .seebuild h3 { font-size: 24px; margin: 0 0 6px; }
+.prose .seebuild p { margin: 0; color: var(--muted); font-size: 16px; }
+.soon { display: inline-block; font-weight: 600; font-size: 15px; padding: 12px 22px; border-radius: 999px; border: 1.5px dashed var(--teal); color: var(--teal); background: #fff; white-space: nowrap; }
