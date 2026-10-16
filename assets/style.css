@@ -281,3 +281,13 @@ th { font-size: 12.5px; letter-spacing: 0.08em; text-transform: uppercase; color
 .prose .seebuild h3 { font-size: 24px; margin: 0 0 6px; }
 .prose .seebuild p { margin: 0; color: var(--muted); font-size: 16px; }
 .soon { display: inline-block; font-weight: 600; font-size: 15px; padding: 12px 22px; border-radius: 999px; border: 1.5px dashed var(--teal); color: var(--teal); background: #fff; white-space: nowrap; }
+
+/* Healthcare Foundation page */
+.hc-intro { font-size: 19px; line-height: 1.6; color: var(--ink); }
+.employers { display: flex; flex-direction: column; gap: 16px; margin: 0 0 8px; }
+.employer { background: #fff; border: 1px solid var(--rule); border-radius: 14px; padding: 20px 22px 8px; }
+.employer .tag { display: block; margin-bottom: 6px; }
+.prose .employer h3 { font-family: var(--body); font-size: 17px; font-weight: 600; color: var(--teal); margin: 0 0 12px; }
+.prose .employer ul { gap: 8px; }
+.hc-note { margin-top: 40px; color: var(--muted); font-style: italic; }
+.hc-groups { display: flex; flex-direction: column; gap: 16px; }
